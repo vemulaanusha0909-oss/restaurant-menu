@@ -1,0 +1,40 @@
+let cart = [];
+let total = 0;
+
+function addToCart(name, price) {
+
+    cart.push({
+        name: name,
+        price: price
+    });
+
+    total += price;
+
+    updateCart();
+
+    alert(name + " added to cart ✓");
+}
+
+function updateCart() {
+
+    const cartItems = document.getElementById("cartItems");
+    const totalElement = document.getElementById("total");
+
+    cartItems.innerHTML = "";
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = "<p>Your cart is empty 🛒</p>";
+    }
+
+    cart.forEach(function(item) {
+
+        const food = document.createElement("p");
+
+        food.innerHTML =
+            item.name + " - ₹" + item.price;
+
+        cartItems.appendChild(food);
+    });
+
+    totalElement.textContent = total;
+}
