@@ -1,109 +1,138 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background: #fff8f0;
     color: #333;
 }
 
 header {
-    background: #ff5722;
-    color: white;
     text-align: center;
-    padding: 30px;
+    background: #ff7043;
+    color: white;
+    padding: 15px 10px;
 }
 
 header h1 {
-    font-size: 35px;
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
 }
 
 nav {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px;
     background: white;
-    padding: 15px;
-    text-align: center;
 }
 
 nav button {
     border: none;
-    background: none;
-    margin: 0 15px;
-    font-size: 16px;
-    cursor: pointer;
+    background: #ff7043;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
 }
 
 .hero {
     text-align: center;
-    padding: 70px 20px;
-    background: #ffe0b2;
+    padding: 15px 10px;
 }
 
 .hero h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    margin: 5px;
+    font-size: 22px;
+}
+
+.hero p {
+    margin: 5px;
 }
 
 .menu {
-    padding: 40px 20px;
-    text-align: center;
+    padding: 10px;
 }
 
 .menu h2 {
-    margin-bottom: 25px;
+    text-align: center;
 }
 
 .food-container {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .food-card {
-    width: 280px;
     background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    padding-bottom: 20px;
-    box-shadow: 0 5px 15px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 8px #ccc;
+    text-align: center;
 }
 
 .food-card img {
-    width: 100%;
-    height: 180px;
+    width: 120px;
+    height: 80px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-.food-card h3,
-.food-card p,
+.food-card h3 {
+    margin: 7px 0 4px;
+    font-size: 18px;
+}
+
+.food-card p {
+    font-size: 13px;
+    margin: 5px;
+}
+
 .food-card h4 {
-    margin: 10px;
+    margin: 7px;
+    font-size: 17px;
 }
 
 .food-card button {
     background: #ff5722;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.food-card button:hover {
-    background: #e64a19;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 .cart {
+    margin: 15px 10px;
+    padding: 15px;
     background: white;
-    margin: 30px;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.cart h2 {
+    margin-top: 0;
+    font-size: 20px;
 }
 
 #cartItems {
-    margin: 20px;
+    font-size: 14px;
+}
+
+@media (min-width: 600px) {
+    .food-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .food-card {
+        width: 30%;
+    }
 }
